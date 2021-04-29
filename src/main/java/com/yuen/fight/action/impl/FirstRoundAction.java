@@ -31,7 +31,7 @@ public class FirstRoundAction extends IAction<FirstRoundAction.Board, MwnFightHa
 
     @Override
     public void end() {
-
+        System.err.println("FirstRoundAction--end--"+board.round);
     }
 
     @Override
@@ -39,6 +39,7 @@ public class FirstRoundAction extends IAction<FirstRoundAction.Board, MwnFightHa
         Creature attacker = box.getAttacker();
         Creature defender = box.getDefender();
         //TODO 战斗逻辑
+        System.err.println("FirstRoundAction- action -"+board.round);
     }
 
     public static class Board implements IBoard<MwnFightHandler.BoardBox> {

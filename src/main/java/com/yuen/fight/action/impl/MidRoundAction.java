@@ -31,7 +31,7 @@ public class MidRoundAction extends IAction<MidRoundAction.Board, MwnFightHandle
 
     @Override
     public void end() {
-
+        System.err.println("MidRoundAction- end -"+board.round);
     }
 
     @Override
@@ -39,6 +39,7 @@ public class MidRoundAction extends IAction<MidRoundAction.Board, MwnFightHandle
         Creature attacker = box.getAttacker();
         Creature defender = box.getDefender();
         //TODO 战斗逻辑
+        System.err.println("MidRoundAction- action -"+board.round);
     }
 
     public static class Board implements IBoard<MwnFightHandler.BoardBox> {

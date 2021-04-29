@@ -10,7 +10,7 @@ import com.yuen.fight.handler.impl.MwnFightHandler;
  * @description:
  * @since 14:24 2021/4/29
  */
-public class TailRoundAction extends IAction<MidRoundAction.Board, MwnFightHandler.BoardBox> {
+public class TailRoundAction extends IAction<TailRoundAction.Board, MwnFightHandler.BoardBox> {
 
     @Override
     public boolean isEnd() {
@@ -31,7 +31,7 @@ public class TailRoundAction extends IAction<MidRoundAction.Board, MwnFightHandl
 
     @Override
     public void end() {
-
+        System.err.println("TailRoundAction- end -"+board.round);
     }
 
     @Override
@@ -39,6 +39,7 @@ public class TailRoundAction extends IAction<MidRoundAction.Board, MwnFightHandl
         Creature attacker = box.getAttacker();
         Creature defender = box.getDefender();
         //TODO 战斗逻辑
+        System.err.println("TailRoundAction- action -"+board.round);
     }
 
     public static class Board implements IBoard<MwnFightHandler.BoardBox> {

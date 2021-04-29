@@ -21,7 +21,7 @@ public abstract class AFightHandler<BOX extends IBoardBox> {
     }
 
     protected void run(Node root) {
-        while (root!=null) {
+        while (root != null) {
             Class actionClazz = root.getClazz();
             IAction action = box.pushAction(actionClazz);
 
@@ -37,7 +37,8 @@ public abstract class AFightHandler<BOX extends IBoardBox> {
             }
             action.end();
             box.popAction();
-            run(root.getNext());
+            root = root.getNext();
+            run(root);
         }
         endFight();
     }
