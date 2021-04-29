@@ -7,7 +7,7 @@ package com.yuen.fight;
  */
 public class Creature {
     private long id;
-    private int hp;
+    private int hp = 1;
 
     public long getId() {
         return id;
@@ -24,8 +24,9 @@ public class Creature {
     public void setHp(int hp) {
         this.hp = hp;
     }
-    public boolean isDead(){
-        return hp<=0;
+
+    public boolean isDead() {
+        return hp <= 0;
     }
 }
 
