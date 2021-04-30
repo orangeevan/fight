@@ -18,6 +18,7 @@ public abstract class AFightHandler<BOX extends IBoardBox> {
 
     public void execute() {
         run(root.getNext());
+        endFight();
     }
 
     protected void run(Node root) {
@@ -40,7 +41,7 @@ public abstract class AFightHandler<BOX extends IBoardBox> {
             root = root.getNext();
             run(root);
         }
-        endFight();
+
     }
 
     public void setBox(BOX box) {
