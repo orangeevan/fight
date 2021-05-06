@@ -13,7 +13,7 @@ import java.util.Objects;
  * @since 10:39 2021/4/28
  */
 public abstract class AFightHandler<BOX extends IBoardBox> {
-    protected static Node root = Node.Builder.newBuilder().build();
+    protected Node root = Node.Builder.newBuilder().build();
     protected BOX box;
 
     public void execute() {
@@ -22,7 +22,7 @@ public abstract class AFightHandler<BOX extends IBoardBox> {
     }
 
     protected void run(Node root) {
-        while (root != null) {
+        if (root != null) {
             Class actionClazz = root.getClazz();
             IAction action = box.pushAction(actionClazz);
 

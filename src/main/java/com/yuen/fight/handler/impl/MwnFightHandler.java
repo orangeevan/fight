@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class MwnFightHandler extends AFightHandler<MwnFightHandler.BoardBox> {
 
-    static {
+     {
         Node t = Node.Builder.newBuilder().setClazz(TailRoundAction.class).build();
 
         Node m_1 = Node.Builder.newBuilder().setClazz(MidRoundAction_1.class).build();
